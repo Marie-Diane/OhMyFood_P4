@@ -1,0 +1,53 @@
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    margin-bottom: 30px;
+    @media (min-width: 992px){
+        width: 330px;
+        margin: 0 30px 0 0;
+    }
+    &_img{
+        object-fit: cover;
+        width: auto;
+        height: 180px;
+    }
+    &_info{
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        padding : 6px 10px;
+        background-color: $colour-green-1;
+        color: $colour-green-2;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    &_title{
+        margin: 16px 0 0 16px;
+    }
+    &_favorite{
+        position: absolute;
+        right: 26px;
+        bottom: 40px;
+        font-size: 26px;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        &:hover{
+            cursor: pointer;
+            background: linear-gradient(190deg, $colour-primary, $colour-secondary);
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 0px transparent;
+        }
+    }
+    &_text{
+     margin: 6px 0 18px 16px   
+    }
+}
+
