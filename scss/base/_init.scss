@@ -1,0 +1,44 @@
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: $font-family-text;
+    font-size: 16px;
+}
+
+header, .location{
+    padding: 20px;
+}
+
+section{
+    padding: 70px 5%;
+    @media (min-width: 992px) {
+        padding: 70px 12%;
+    }
+}
+
+h1, h2{
+    margin: 0;
+    font-family: $font-family-logo-title;
+}
+
+h3{
+    margin: 0;
+}
+
+h2{
+    font-size: 32px;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+p{
+    margin: 0;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
