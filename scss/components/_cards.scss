@@ -16,10 +16,7 @@
     &_img{
         object-fit: cover;
         width: auto;
-        height: 230px;
-        @media (min-width: 992px){
-            height: 180px;
-        }
+        height: 180px;
     }
     &_info{
         position: absolute;
@@ -28,7 +25,7 @@
         padding : 6px 10px;
         background-color: $colour-green-1;
         color: $colour-green-2;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
     }
     &_title{
