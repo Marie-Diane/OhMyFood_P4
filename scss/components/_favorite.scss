@@ -1,0 +1,13 @@
+.favorite{
+    position: absolute;
+    font-size: 20px;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+        &:hover{
+            cursor: pointer;
+            background: linear-gradient(190deg, $colour-primary, $colour-secondary);
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 0px transparent;
+        }
+}

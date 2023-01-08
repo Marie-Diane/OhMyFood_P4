@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2? family= Raleway & family= Roboto+Serif:opsz,wght@8..144,100 & family= Shrikhand & display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  max-width: 1400px;
   margin: 0 auto;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -12,7 +12,7 @@ body {
 }
 
 header, .location {
-  padding: 20px;
+  padding: 10px;
 }
 
 section {
@@ -24,26 +24,27 @@ section {
   }
 }
 
-h1, h2, h3 {
-  margin: 0;
+h1 {
   font-family: Shrikhand, Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
-h4 {
+h1, h2, h3, h4, p {
   margin: 0;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 28px;
+}
+
+h4 {
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
   color: currentColor;
-}
-
-p {
-  margin: 0;
 }
 
 button {
@@ -57,7 +58,7 @@ button {
   padding: 18px 26px;
   color: white;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 16px;
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .button:hover {
@@ -70,13 +71,15 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  height: auto;
+  max-width: 100%;
   border-radius: 20px;
   background-color: white;
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 @media (min-width: 992px) {
   .card {
@@ -104,14 +107,40 @@ button {
   margin: 16px 0 0 16px;
 }
 .card_favorite {
-  position: absolute;
   right: 26px;
   bottom: 40px;
-  font-size: 26px;
+}
+.card_text {
+  margin: 6px 0 18px 16px;
+}
+.card_title, .card_text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card_price {
+  margin: 12px 16px;
+  display: flex;
+  align-items: flex-end;
+}
+.card_select {
   color: white;
+  font-size: 22px;
+  width: 0px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.favorite {
+  position: absolute;
+  font-size: 20px;
+  color: transparent;
   -webkit-text-stroke: 1px black;
 }
-.card_favorite:hover {
+.favorite:hover {
   cursor: pointer;
   background: linear-gradient(190deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -119,20 +148,18 @@ button {
   color: transparent;
   -webkit-text-stroke: 0px transparent;
 }
-.card_text {
-  margin: 6px 0 18px 16px;
-}
 
 .header {
   position: relative;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: white;
 }
-.header_logo {
-  width: 100%;
-  height: 40px;
-  padding-top: 5px;
+.header_back-home {
+  position: absolute;
+  left: 20px;
 }
 
 .footer {
@@ -148,10 +175,8 @@ button {
     padding-right: 12%;
   }
 }
-.footer_logo {
-  filter: invert(1);
-  height: 23px;
-  width: auto;
+.footer_title {
+  font-size: 24px;
 }
 .footer_nav {
   display: flex;
@@ -275,4 +300,85 @@ button {
 }
 .restaurants_title {
   margin-bottom: 26px;
+}
+
+.menu_img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 420px;
+}
+
+.menu {
+  margin-top: 230px;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .menu {
+    margin: 300px 12% 0;
+  }
+}
+.menu_title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .menu_title {
+    width: auto;
+  }
+}
+.menu_title_favorite {
+  right: 20px;
+}
+@media (min-width: 992px) {
+  .menu_title_favorite {
+    position: initial;
+    margin-left: 20px;
+  }
+}
+.menu_part {
+  width: 100%;
+}
+.menu_part_title {
+  padding-top: 22px;
+}
+.menu_part_bar {
+  width: 40px;
+  padding: 1.5px;
+  margin: 6px 0 18px 0;
+  background-color: #99E2D0;
+}
+.menu_part_card {
+  flex-direction: row;
+  max-height: 76px;
+}
+@media (min-width: 992px) {
+  .menu_part_card {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+.menu_part_card_info {
+  flex: 1;
+  max-width: calc(100% - 60px);
+}
+.menu_part_card:hover .card_select {
+  width: 60px;
+}
+.menu_part_card:hover .menu_part_card_info {
+  max-width: calc(100% - 120px);
+}
+.menu_btn {
+  padding: 16px 50px;
 }/*# sourceMappingURL=style.css.map */

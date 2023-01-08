@@ -2,13 +2,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: auto;
+    max-width: 100%;
     border-radius: 20px;
     background-color: white;
     box-shadow: $box-shadow;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    cursor:pointer;
     @media (min-width: 992px){
         width: 330px;
         margin: 0 30px 0 0;
@@ -32,22 +34,32 @@
         margin: 16px 0 0 16px;
     }
     &_favorite{
-        position: absolute;
         right: 26px;
         bottom: 40px;
-        font-size: 26px;
-        color: white;
-        -webkit-text-stroke: 1px black;
-        &:hover{
-            cursor: pointer;
-            background: linear-gradient(190deg, $colour-primary, $colour-secondary);
-            background-clip: text;
-            color: transparent;
-            -webkit-text-stroke: 0px transparent;
-        }
     }
     &_text{
-     margin: 6px 0 18px 16px   
+     margin: 6px 0 18px 16px;
+    }
+    
+    &_title,
+    &_text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &_price{
+        margin: 12px 16px;
+        display: flex;
+        align-items: flex-end;
+    }
+    &_select{
+        color: white;
+        font-size: 22px;
+        width: 0px;
+        background-color: $colour-green-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
     }
 }
-

@@ -8,10 +8,8 @@
         align-items: center;
         padding-right: 12%;
     }
-    &_logo{
-        filter: invert(1);
-        height: 23px;
-        width: auto;
+    &_title{
+        font-size: 24px;
     }
     &_nav{
         display: flex;
