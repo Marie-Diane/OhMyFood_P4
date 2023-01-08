@@ -1,5 +1,4 @@
 body{
-    max-width: 1400px;
     margin: 0 auto;
     font-family: $font-family-text;
     font-size: 16px;
@@ -9,7 +8,7 @@ body{
 }
 
 header, .location{
-    padding: 20px;
+    padding: 10px;
 }
 
 section{
@@ -19,26 +18,28 @@ section{
     }
 }
 
-h1, h2, h3{
-    margin: 0;
+h1{
     font-family: $font-family-logo-title;
+    font-weight: normal;
 }
 
-h4{
+h1, h2, h3, h4, p{
     margin: 0;
 }
 
 h2{
-    font-size: 32px;
+    font-size: 28px;
+}
+
+h4{
+    font-weight: normal;
+    text-transform: uppercase;
+
 }
 
 a{
     text-decoration: none;
     color: currentColor;
-}
-
-p{
-    margin: 0;
 }
 
 button{
