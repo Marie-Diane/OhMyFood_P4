@@ -49,9 +49,15 @@
         &_card{
             flex-direction: row;
             max-height: 76px;
+            opacity: 0;
             @media (min-width: 992px){
                 width: 100%;
                 margin: 0 0 20px 0;
+            }
+            @for $i from 1 through 10{
+                &:nth-of-type(#{$i}){
+                    animation: appearance 0.5s #{$i * 0.5}s 1 forwards;
+                }
             }
             &_info{
                 flex: 1;
@@ -66,7 +72,6 @@
                 }
             }
         }
-        
     }
     &_btn{
         padding: 16px 50px;
