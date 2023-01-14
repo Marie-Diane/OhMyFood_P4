@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import "./utils/variables";
+@import "./utils/animations";
 @import "./base/init";
 @import "./components/boutons";
 @import "./components/cards";
@@ -10,3 +11,4 @@
 @import "./layouts/footer";
 @import "./pages/home";
 @import "./pages/menu";
+@import "./pages/loader";
