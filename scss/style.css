@@ -82,7 +82,7 @@ h1, h2, h3, h4, p {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 h4 {
@@ -381,6 +381,7 @@ button {
   }
 }
 .menu_title {
+  font-family: Shrikhand, Arial, Helvetica, sans-serif;
   width: 100%;
   position: relative;
   display: flex;
