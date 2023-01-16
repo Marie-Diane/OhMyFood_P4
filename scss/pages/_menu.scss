@@ -55,7 +55,7 @@
                 width: 100%;
                 margin: 0 0 20px 0;
             }
-            @for $i from 1 through 10{
+            @for $i from 1 through 4{
                 &:nth-of-type(#{$i}){
                     animation: appearance 0.5s #{$i * 0.5}s 1 forwards;
                 }
